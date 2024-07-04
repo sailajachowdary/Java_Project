@@ -1,0 +1,42 @@
+﻿package com.hcltech.project;
+
+
+private static void Login_In() 
+{
+	//Enter into the login method to login into
+	Scanner sc = new Scanner(System.in);
+	System.out.println("Menu\n1.Loggin in\n2.Register new user");
+	System.out.println("Enter your choice:");
+	int choice=sc.nextInt();
+	switch(choice) 
+	{
+	case 1:System.out.println("Logging in..."); System.out.println("Enter Username:");
+	//checking entered user name is equals to registered username 
+	String username = sc.next();
+	if(username.equals(registeredUsername)) 
+	{
+		loggedIn =true;
+		//If username is valid then only it asks password
+	System.out.println("Enter Password:");
+	String password = sc.next();
+	if(password.equals(registeredPassword))
+	{
+		loggedIn=true;
+		System.out.println("....LOGIN SUCCESSFULLY....");
+	}
+	else
+	{
+		//If password is not 
+		System.out.println("Invalid password. Please try again..");
+	}}
+	else 
+	{
+		System.out.println("Invalid username");
+		System.out.println(".....LOGIN AGAIN......");
+	}
+	break;
+	case 2: System.out.println("....Plz register first...."); break;
+	default:System.out.println("Exit");
+	
+	}
+}
