@@ -1,0 +1,70 @@
+﻿
+
+package project;
+
+import java.util.Scanner;
+
+public class Bookseat 
+{
+	public static void main(String[] args)
+	{
+		int totalSeats = 100; // Total number of seats available
+		int bookedSeats = 0;  // Number of seats currently booked
+		int availableSeats=0;
+		String departureStation;
+		String destinationStation;
+		Scanner scanner=new Scanner(System.in);
+		Bookseat bk=new Bookseat();
+		bk.bookSeat();
+	}
+	
+	
+	public void bookSeat()
+	{
+		
+		String ch;
+		int gen=0;
+		int ac=0;
+		int sleep=0;
+		do
+		{
+			System.out.println("Select your seats:\n 1.General(G) \n2.A/C(Ac)\n3.Sleeper(S)");
+	    	Scanner scanner=new Scanner(System.in);
+			ch= scanner.next();
+	    	switch(ch)
+	    	{
+	    		case "G" :System.out.println("Enter the number of General seats:");
+	    					gen=scanner.nextInt();
+	    					break;
+	  
+	    		case "AC" :System.out.println("Enter the number of A/C seats:");
+							ac=scanner.nextInt();
+							break;
+				
+	    		case "S"	:System.out.println("Enter the number of Sleeper seats:");
+							sleep=scanner.nextInt();
+							break;
+	    		case "0":System.out.println("Exit");
+	    				break;
+				default:System.out.println("Please enter proper input");
+				  
+	    	}
+			
+		}while(!ch.equals("0"));
+
+			int total=gen+ac+sleep;
+	        String departureStation = null;
+			String destinationStation = null;
+			System.out.println(total +"Seat(s) booked successfully from " + departureStation + " to " + destinationStation + ".");
+
+	}
+
+
+}
+
+
+
+
+
+
+
